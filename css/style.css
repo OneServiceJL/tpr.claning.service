@@ -284,7 +284,7 @@ img{
     margin: 0 auto 20px;
     box-shadow: var(--shadow);
     background-color: var(--bg-color);
-    padding: 4%;
+    padding: 8px;
     overflow: hidden;
 }
 .services-item .img-box img{
