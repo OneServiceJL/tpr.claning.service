@@ -257,12 +257,10 @@ textarea.input-control{
     align-items: center;
     justify-content: space-between;
 }
-.img-logo{
-    width: 200px;
-    height: inherit;
-    align-items: center;
-    gap: 50px;
-    position: relative;
+.header .image-logo{
+    display: block;
+    margin: auto;
+    width: 50%;
 }
 .header .logo a{
     font-size: 50px;
