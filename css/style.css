@@ -129,13 +129,57 @@ img{
     padding: 0 15px;
 }
 
-
-/* # gird */
+/* # grid */
 .grid{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
 }
+
+/* Home section grid */
+.home .grid{
+    min-height: 100vh;
+    align-items: center;
+}
+
+.home-text{
+    grid-column: span 7;
+}
+
+.home-img{
+    grid-column: span 5;
+}
+
+/* About section grid */
+.about .grid{
+    align-items: center;
+}
+
+.about-img{
+    grid-column: span 6;
+}
+
+.about-text{
+    grid-column: span 6;
+}
+
+/* Services section grid */
+.services .grid{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Pricing section grid */
+.pricing .grid{
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Team section grid */
+.team .grid{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
 /* # section */
 .section-padding{
     padding: 60px 0;
@@ -302,7 +346,6 @@ textarea.input-control{
 }
 .home-text,
 .home-img{
-    grid-column: span 6;
     align-self: center;
 }
 .home-text h1{
@@ -347,7 +390,6 @@ textarea.input-control{
 }
 .about-img,
 .about-text{
-    grid-column: span 6;
     align-self: center;
 }
 .about-img .img-box{
@@ -394,7 +436,6 @@ textarea.input-control{
 }
 /* # services */
 .services-item{
-    grid-column: span 3;
     text-align: center;
 }
 .services-item .img-box{
@@ -421,7 +462,6 @@ textarea.input-control{
 }
 /* # pricing */
 .pricing-item{
-    grid-column: span 4;
     background-color: var(--bg-color);
     box-shadow: var(--shadow);
     padding: 30px;
@@ -474,8 +514,10 @@ textarea.input-control{
 
 /* # team */
 .team-item{
-    grid-column: span 4;
+    position: relative;
+    overflow: hidden;
 }
+
 .team-item .img-box{
     height: 300px;
     box-shadow: var(--shadow);
@@ -588,3 +630,199 @@ textarea.input-control{
     border-color: initial;
 }
 /* # responsive */
+@media (max-width: 991px){
+    .header .nav-toggler{
+        display: flex;
+        height: 34px;
+        width: 44px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+    }
+
+    .header .nav-toggler span{
+        height: 2px;
+        width: 30px;
+        background-color: var(--text-x-dark-gray);
+        position: relative;
+    }
+
+    .header .nav-toggler span::before,
+    .header .nav-toggler span::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--text-x-dark-gray);
+    }
+
+    .header .nav-toggler span::before{
+        top: -8px;
+    }
+
+    .header .nav-toggler span::after{
+        top: 8px;
+    }
+
+    .header .nav{
+        position: fixed;
+        right: -300px;
+        top: 0;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--bg-white);
+        box-shadow: var(--shadow);
+        padding: 70px 0 0;
+        transition: right 0.3s ease;
+        z-index: 100;
+    }
+
+    .header .nav.open{
+        right: 0;
+    }
+
+    .nav li{
+        display: block;
+        margin: 0;
+    }
+
+    .nav a{
+        padding: 10px 30px;
+    }
+
+    /* Grid adjustments */
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Home section */
+    .home-text h1{
+        font-size: var(--fs-3xl);
+    }
+
+    .home-img{
+        max-width: 380px;
+        margin: auto;
+    }
+
+    /* About section */
+    .about .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .about-img{
+        max-width: 380px;
+        margin: auto;
+    }
+
+    /* Services section */
+    .services .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Pricing section */
+    .pricing .grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px){
+    /* Grid adjustments */
+    .grid{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Home section */
+    .home-text{
+        text-align: center;
+    }
+
+    .home-text h1{
+        font-size: var(--fs-2xl);
+    }
+
+    .home-img{
+        max-width: 300px;
+    }
+
+    /* About section */
+    .about-img .box{
+        right: 5%;
+    }
+
+    /* Services section */
+    .services .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .services-item{
+        max-width: 380px;
+        margin: auto;
+    }
+
+    /* Pricing section */
+    .pricing .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-item{
+        max-width: 380px;
+        margin: auto;
+    }
+
+    /* Section padding */
+    .section-padding{
+        padding: 40px 0;
+    }
+
+    .section-title{
+        margin-bottom: 30px;
+    }
+
+    .section-title .sub-title{
+        font-size: var(--fs-2xl);
+    }
+}
+
+@media (max-width: 575px){
+    /* Home section */
+    .home-text h1{
+        font-size: var(--fs-xl);
+    }
+
+    .home-text h4{
+        font-size: var(--fs-lg);
+    }
+
+    .home-img{
+        max-width: 250px;
+    }
+
+    /* About section */
+    .about-img{
+        max-width: 250px;
+    }
+
+    .about-text .sub-title{
+        font-size: var(--fs-xl);
+    }
+
+    /* Services and pricing items */
+    .services-item,
+    .pricing-item{
+        max-width: 300px;
+    }
+
+    /* Footer */
+    .footer .social-links a{
+        height: 35px;
+        width: 35px;
+    }
+}

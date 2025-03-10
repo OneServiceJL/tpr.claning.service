@@ -1,6 +1,22 @@
+/* Mobile Menu */
+const navToggler = document.querySelector(".js-nav-toggler");
+const nav = document.querySelector(".nav");
 
+function toggleNav() {
+    nav.classList.toggle("open");
+    navToggler.classList.toggle("active");
+}
 
-/* header bg reaveal */
+navToggler.addEventListener("click", toggleNav);
+
+// Close nav when clicking outside
+document.addEventListener("click", (e) => {
+    if(e.target.closest(".nav") || e.target.closest(".js-nav-toggler")) return;
+    nav.classList.remove("open");
+    navToggler.classList.remove("active");
+});
+
+/* header bg reveal */
 
 const headerBg = () => {
     const header = document.querySelector(".js-header");
