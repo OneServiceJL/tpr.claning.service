@@ -1,37 +1,63 @@
-/* Base styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
-.container {
+.style-switcher{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    width: 200px;
+    height: 100%;
+    box-shadow: var(--shadow);
+}
+.style-switcher-main{
+    height: 100%;
+    background-color: var(--bg-color);
+    padding: 30px;
+    overflow-y: auto;
+}
+.style-switcher-toggler{
+    height: 40px;
+    width: 40px;
+    background-color: var(--main-color);
+    color: var(--text-white);
+    font-size: var(--fs-md);
+    position: absolute;
+    left: -40px;
+    top: 28%;
+    border-radius: 8px 0 0 8px;
+    border: none;
+}
+.style-switcher h2{
+    text-transform: capitalize;
+    font-size: var(--fs-xl);
+    font-weight: 500;
+    padding: 0 0 10px;
+}
+.style-switcher-item{
+    padding: 15px 0;
+    border-top: 1px solid var(--border-color);
+}
+.style-switcher-item p{
+    margin-bottom: 10px;
+}
+.hue-slider{
+    -webkit-appearance: none;
     width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Responsive styles */
-@media (max-width: 1200px) {
-    .container {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 992px) {
-    .container {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 5px;
-    }
-}
-
-@media (max-width: 576px) {
-    .container {
-        padding: 0;
-    }
+    outline: none;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: liner-gradient(to right, 
+    hsl(0, var(--saturation), var(--lightness)),
+    hsl(30, var(--saturation), var(--lightness)),
+    hsl(60, var(--saturation), var(--lightness)),
+    hsl(90, var(--saturation), var(--lightness)),
+    hsl(120, var(--saturation), var(--lightness)),
+    hsl(150, var(--saturation), var(--lightness)),
+    hsl(180, var(--saturation), var(--lightness)),
+    hsl(210, var(--saturation), var(--lightness)),
+    hsl(240, var(--saturation), var(--lightness)),
+    hsl(270, var(--saturation), var(--lightness)),
+    hsl(300, var(--saturation), var(--lightness)),
+    hsl(360, var(--saturation), var(--lightness)),
+    );
 }
