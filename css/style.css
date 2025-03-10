@@ -170,6 +170,10 @@ img{
 .section-title .title::after{
     right: 0;
 }
+.section-title sub-title{
+    font-size: var(--fs-3xl);
+    text-transform: capitalize;
+}
 
 /* # buttons */
 button{
@@ -349,6 +353,39 @@ textarea.input-control{
     background-color: var(--bg-color);
     box-shadow: var(--shadow);
     position: relative;
+}
+.about-img .img-box img{
+    border-radius: 50px;
+}
+.about-img .box{
+    height: 125px;
+    width: 125px;
+    background-color: var(--main-color);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 40px;
+    padding: 15px;
+}
+.about-img .box-1{
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.about-img .box span{
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: var(--fs-3xl);
+    margin: 0 0 5px;
+    line-height: 1;
+}
+.about-img .box p{
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+    color: var(--text-light-gray);
+    margin: 0;
 }
 /* # services */
 .services-item{
