@@ -8,36 +8,12 @@
   <link type="text/css" rel="stylesheet" href="css/aos.css" />
   <link type="text/css" rel="stylesheet" href="css/style-switcher.css" />
   <link type="text/css" rel="stylesheet" href="css/style.css" />
-  <style>
-    .contact-button {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background-color: #25d366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-      transition: transform 0.3s;
-    }
-    .contact-button:hover {
-      transform: scale(1.05);
-    }
-    .contact-button i {
-      font-size: 20px;
-    }
-  </style>
 </head>
 <body>
     <!-- Page Wrapper Start -->
      <div class="page-wrapper">
         <a href="https://wa.me/13194318692" class="contact-button">
-            <i class="fas fa-phone"></i>
+            <i class="fab fa-whatsapp"></i>
             <span>Contact Us Now</span>
         </a>
 
@@ -164,7 +140,7 @@
                     <div class="pricing-item basic">
                         <div class="pricing-header">
                             <h3>Kitchen</h3>
-                            <div class="price"><span>$299</span> montly</div>    
+                            <div class="price"><span>Discuss</span>with us</div>     
                         </div>
                         <div class="pricing-body">
                             <ul>
@@ -186,7 +162,7 @@
                     <div class="pricing-item basic">
                         <div class="pricing-header">
                             <h3>Living Room</h3>
-                            <div class="price"><span>$350</span> montly</div>    
+                            <div class="price"><span>Discuss</span>with us</div>    
                         </div>
                         <div class="pricing-body">
                             <ul>
@@ -208,7 +184,7 @@
                     <div class="pricing-item basic">
                         <div class="pricing-header">
                             <h3>Bathroom</h3>
-                            <div class="price"><span>$450</span> montly</div>    
+                            <div class="price"><span>Discuss</span>with us</div>    
                         </div>
                         <div class="pricing-body">
                             <ul>
@@ -230,7 +206,7 @@
                     <div class="pricing-item basic">
                         <div class="pricing-header">
                             <h3>Bedroom</h3>
-                            <div class="price"><span>$450</span> montly</div>    
+                            <div class="price"><span>Discuss</span>with us</div>     
                         </div>
                         <div class="pricing-body">
                             <ul>
@@ -321,21 +297,21 @@
                                     </div>
                                 </div>
                                 <div class="contact-form">
-                                    <form>
+                                    <form id="whatsappContactForm" onsubmit="return sendToWhatsApp(event)">
                                         <div class="input-box">
-                                            <input type="email" placeholder="Name" class="input-control">
+                                            <input type="text" placeholder="Name" class="input-control" required>
                                         </div>
                                         <div class="input-box">
-                                            <input type="text" placeholder="Email" class="input-control">
+                                            <input type="email" placeholder="Email" class="input-control" required>
                                         </div>
                                         <div class="input-box">
-                                            <input type="text" placeholder="Phone" class="input-control">
+                                            <input type="tel" placeholder="Phone" class="input-control" required>
                                         </div>
                                         <div class="input-box">
                                             <textarea placeholder="Message" class="input-control" required></textarea>
                                         </div>
                                         <div class="btn-wrap">
-                                            <button type="submit" class="btn">Send Message</button>
+                                            <button type="submit" class="btn">Send via WhatsApp</button>
                                         </div>
                                     </form>
                                 </div>
@@ -392,5 +368,6 @@
 <script src="js/aos.js"></script>
 <script src="js/main.js"></script>
 <script src="js/style-switcher.js"></script>
+<script src="js/contact-form.js"></script>
 </body>
 </html>

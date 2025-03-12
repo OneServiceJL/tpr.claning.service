@@ -826,3 +826,29 @@ textarea.input-control{
         width: 35px;
     }
 }
+
+/* Contact Button Styles */
+.contact-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+}
+
+.contact-button i {
+    font-size: 20px;
+}
