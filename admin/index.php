@@ -25,7 +25,7 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -59,8 +59,8 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
             <div id="page-content-wrapper">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container-fluid">
-                        <button class="btn btn-dark" id="sidebarToggle">
-                            <i class="fas fa-bars"></i>
+                        <button class="btn btn-light border" id="sidebarToggle">
+                            <i class="fas fa-bars text-dark"></i>
                         </button>
                         <div class="ms-auto">
                             <a href="logout.php" class="btn btn-outline-light">
@@ -128,8 +128,7 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
         </div>
     <?php endif; ?>
     <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
