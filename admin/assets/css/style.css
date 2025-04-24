@@ -30,3 +30,26 @@ body.sb-sidenav-toggled #sidebar-wrapper {
         margin-left: -15rem;
     }
 }
+
+
+.status-select {
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.status-select option[value="pending"] {
+    background-color: #ffc107;
+}
+
+.status-select option[value="confirmed"] {
+    background-color: #28a745;
+}
+
+.status-select option[value="completed"] {
+    background-color: #17a2b8;
+}
+
+.status-select option[value="cancelled"] {
+    background-color: #dc3545;
+}

@@ -24,9 +24,13 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>TPR Amdin Panel </title>
+    <!-- Add favicon/logo for the title bar -->
+    <link rel="icon" type="image/png" href="../img/Logo.png">
+    <link rel="shortcut icon" type="image/png" href="../img/Logo.png">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 
@@ -46,8 +50,8 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
                     <a href="pages/services.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'pages/services.php' ? 'active' : ''; ?>">
                         <i class="fas fa-broom me-2"></i>Services
                     </a>
-                    <a href="pages/users.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'pages/users.php' ? 'active' : ''; ?>">
-                        <i class="fas fa-users me-2"></i>Users
+                    <a href="pages/reservation.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'pages/reservation.php' ? 'active' : ''; ?>">
+                        <i class="fas fa-users me-2"></i>Reservations
                     </a>
                     <a href="pages/settings.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'pages/settings.php' ? 'active' : ''; ?>">
                         <i class="fas fa-cog me-2"></i>Settings
@@ -103,32 +107,47 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
         </div>
     <?php else: ?>
         <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="text-center">Admin Login</h3>
-                        </div>
-                        <div class="card-body">
-                            <form action="login.php" method="POST">
-                                <div class="mb-3">
-                                    <label for="username" class="form-label">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" required>
+            <div class="alert alert-danger text-center" role="alert">
+                <?php if (isset($_SESSION['error'])): ?>
+                    <?php echo $_SESSION['error'];
+                    unset($_SESSION['error']); ?>
+                <?php else: ?>
+                    Please log in to access the admin panel.
+                <?php endif; ?>
+            </div>
+            <div class="text-center mb-3">
+                <a href="../index.html" class="btn btn-secondary">
+                    <i class="fas fa-home me-2"></i>Return to Homepage
+                </a>
+            </div>
+            <div class="container mt-5">
+                <div class="container mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="text-center">Admin Login</h3>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password" required>
+                                <div class="card-body">
+                                    <form action="login.php" method="POST">
+                                        <div class="mb-3">
+                                            <label for="username" class="form-label">Username</label>
+                                            <input type="text" class="form-control" id="username" name="username" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                                    </form>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100">Login</button>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    <?php endif; ?>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+            <?php endif; ?>
+            <script src="assets/js/script.js"></script>
+            <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

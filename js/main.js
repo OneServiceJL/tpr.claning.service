@@ -11,7 +11,7 @@ navToggler.addEventListener("click", toggleNav);
 
 // Close nav when clicking outside
 document.addEventListener("click", (e) => {
-    if(e.target.closest(".nav") || e.target.closest(".js-nav-toggler")) return;
+    if (e.target.closest(".nav") || e.target.closest(".js-nav-toggler")) return;
     nav.classList.remove("open");
     navToggler.classList.remove("active");
 });
@@ -21,14 +21,40 @@ document.addEventListener("click", (e) => {
 const headerBg = () => {
     const header = document.querySelector(".js-header");
 
-    window.addEventListener("scroll", function()  {
-        if(this.scrollY > 0){
+    window.addEventListener("scroll", function () {
+        if (this.scrollY > 0) {
             header.classList.add("bg-reveal");
         }
-        else{
+        else {
             header.classList.remove("bg-reveal");
         }
     });
 
 }
 headerBg();
+
+
+document.getElementById('reservationForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch('post_reservation.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                alert(data.message);
+                document.getElementById('reservationForm').reset();
+                bootstrap.Modal.getInstance(document.getElementById('reservationModal')).hide();
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while submitting the reservation');
+        });
+});
