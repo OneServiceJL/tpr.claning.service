@@ -40,16 +40,16 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
                     <a href="index.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">
                         <i class="fas fa-tachometer-alt me-2"></i>Dashboard
                     </a>
-                    <a href="bookings.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'bookings.php' ? 'active' : ''; ?>">
-                        <i class="fas fa-calendar-alt me-2"></i>Bookings
+                    <a href="pages/post.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'pages/post.php' ? 'active' : ''; ?>">
+                        <i class="fas fa-calendar-alt me-2"></i>Post
                     </a>
-                    <a href="services.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : ''; ?>">
+                    <a href="pages/services.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'pages/services.php' ? 'active' : ''; ?>">
                         <i class="fas fa-broom me-2"></i>Services
                     </a>
-                    <a href="users.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'users.php' ? 'active' : ''; ?>">
+                    <a href="pages/users.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'pages/users.php' ? 'active' : ''; ?>">
                         <i class="fas fa-users me-2"></i>Users
                     </a>
-                    <a href="settings.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'settings.php' ? 'active' : ''; ?>">
+                    <a href="pages/settings.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'pages/settings.php' ? 'active' : ''; ?>">
                         <i class="fas fa-cog me-2"></i>Settings
                     </a>
                 </div>
