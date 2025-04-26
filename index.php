@@ -11,6 +11,7 @@
     <link type="text/css" rel="stylesheet" href="css/fontawesome.min.css" />
     <link type="text/css" rel="stylesheet" href="css/aos.css" />
     <link type="text/css" rel="stylesheet" href="css/style-switcher.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
@@ -104,59 +105,52 @@
         <!-- service section start -->
         <section class="services section-padding" id="services">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title text-center mb-5">
                     <span class="title">Services</span>
-                    <h2 class="sub-title">what we do</h2>
+                    <h2 class="sub-title">What We Do</h2>
                 </div>
-
-                <div class="gallery-container">
-                    <div class="gallery">
-                        <img src="img/galery/1.jpg" alt="Gallery Image 1">
-                        <img src="img/galery/2.jpg" alt="Gallery Image 2">
-                        <img src="img/galery/3.jpg" alt="Gallery Image 3">
-                        <img src="img/galery/4.jpg" alt="Gallery Image 4">
-                        <img src="img/galery/5.jpg" alt="Gallery Image 1">
-                        <img src="img/galery/6.jpg" alt="Gallery Image 2">
-                        <img src="img/galery/7.jpg" alt="Gallery Image 3">
-                        <img src="img/galery/8.webp" alt="Gallery Image 4">
-                        <img src="img/galery/9.jpg" alt="Gallery Image 1">
-                        <img src="img/galery/10.jpg" alt="Gallery Image 2">
-                        <img src="img/galery/11.jpg" alt="Gallery Image 3">
-                    </div>
-                </div>
-                <div class="grid">
-                    <!-- service item start -->
-                    <div class="services-item">
-                        <div class="img-box">
-                            <img src="img/service/house.jpg" alt="carpet">
+                <div class="row g-4">
+                    <!-- Service Item 1 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <img src="img/service/house.jpg" class="card-img-top" alt="Carpet Cleaning">
+                            <div class="card-body">
+                                <h5 class="card-title">Carpet Cleaning</h5>
+                            </div>
                         </div>
-                        <h3>carpet cleaning</h3>
                     </div>
-                    <div class="services-item">
-                        <div class="img-box">
-                            <img src="img/service/window.jpg" alt="window">
+                    <!-- Service Item 2 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <img src="img/service/window.jpg" class="card-img-top" alt="Window Cleaning">
+                            <div class="card-body">
+                                <h5 class="card-title">Window Cleaning</h5>
+                            </div>
                         </div>
-                        <h3>windows cleaning</h3>
                     </div>
-                    <div class="services-item">
-                        <div class="img-box">
-                            <img src="img/service/bathroom.jpg" alt="bathroom">
+                    <!-- Service Item 3 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <img src="img/service/bathroom.jpg" class="card-img-top" alt="Bathroom Cleaning">
+                            <div class="card-body">
+                                <h5 class="card-title">Bathroom Cleaning</h5>
+                            </div>
                         </div>
-                        <h3>bathroom cleaning</h3>
                     </div>
-                    <div class="services-item">
-                        <div class="img-box">
-                            <img src="img/service/furniture.png" alt="furniture">
+                    <!-- Service Item 4 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <img src="img/service/furniture.png" class="card-img-top" alt="Furniture Cleaning">
+                            <div class="card-body">
+                                <h5 class="card-title">Furniture Cleaning</h5>
+                            </div>
                         </div>
-                        <h3>furniture cleaning</h3>
                     </div>
-
-                    <!-- service item end -->
                 </div>
             </div>
-
         </section>
         <!-- service section end -->
+
 
         <!--pricing section start -->
         <section class="pricing section-padding" id="pricing">
@@ -454,6 +448,7 @@
     <script src="js/main.js"></script>
     <script src="js/style-switcher.js"></script>
     <script src="js/contact-form.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var myModal = new bootstrap.Modal(document.getElementById('reservationModal'));

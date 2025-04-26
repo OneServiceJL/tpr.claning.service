@@ -116,7 +116,7 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
                 <?php endif; ?>
             </div>
             <div class="text-center mb-3">
-                <a href="../index.html" class="btn btn-secondary">
+                <a href="../index.php" class="btn btn-secondary">
                     <i class="fas fa-home me-2"></i>Return to Homepage
                 </a>
             </div>

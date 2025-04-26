@@ -26,6 +26,10 @@
     }
 }
 
+.carousel-inner img {
+    max-height: 200px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover; /* Maintient le ratio tout en remplissant l'espace */
+}
 
 /* # variable */
 :root {
